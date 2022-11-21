@@ -26,11 +26,14 @@ def print_line(line, encoding, errors):
     # the .strip() removes the empty spaces to the left and right of the language file  
     next_lang = line.strip()
     
-    # this variable stores the variable above and stores it in byte form
+    # this variable stores the variable above and stores it in byte form using .encode()
     # 
     raw_bytes = next_lang.encode(encoding, errors=errors)
+    
+    # this variable stores a debyted version of the variable above that stores the variable that stores the stripped (.strip) language file   
     cooked_string = raw_bytes.decode(encoding, errors=errors)
 
+    # this prints the byted version of the language file, a cool random string and the debyted version of the language file
     print(raw_bytes, '<===>', cooked_string)
 
 # this variable opens the text file 
